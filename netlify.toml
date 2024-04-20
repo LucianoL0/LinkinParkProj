@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/*"
+to = "/Linkinpark.html"
+status = 200

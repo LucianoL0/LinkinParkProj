@@ -1,0 +1,177 @@
+/* font-family: "Playfair Display SC", serif; */
+/* font-family: "Platypi", serif; */
+
+
+:root {
+    --white: #fff;
+    --black: #000000;
+    --gray: #696969;
+    --gap: 3rem;
+}
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 150vh;
+    background-image: url(/LinkinParkV2/img/Box@1x-5.0s-1912px-932px.svg);
+    color: rgb(255, 255, 255);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* CSS_Elementos */
+h1 {
+    font-size: 5rem;
+    /* text-transform: uppercase; */
+    font-family: "Playfair Display SC", serif;
+    position: relative;
+}
+
+h2 {
+    font-size: 4.5rem;
+    /* text-transform: uppercase; */
+    font-family: "Playfair Display SC", serif;
+}
+
+h3 {
+    font-size: 4rem;
+    /* text-transform: uppercase; */
+    font-family: "Playfair Display SC", serif;
+}
+
+h4 {
+    font-size: 3.5rem;
+    /* text-transform: uppercase; */
+    font-family: "Playfair Display SC", serif;
+}
+
+h5 {
+    font-size: 3rem;
+    /* text-transform: uppercase; */
+    font-family: "Playfair Display SC", serif;
+}
+
+h6 {
+    font-size: 2.5rem;
+    /* text-transform: uppercase; */
+    font-family: "Playfair Display SC", serif;
+}
+
+p {
+    font-size: 2.6rem;
+    font-family: "Platypi", serif;
+}
+
+a {
+    display: block;
+    padding: 2rem;
+    text-decoration: none;
+    color: var(--white);
+    z-index: 4;
+    transition: all 500ms ease-in-out;
+
+}
+aside h1 a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0.2rem;
+    height: 100%;
+    border-radius: 0.2rem;
+    background-color: var(--black);
+    transition: all 400ms ease-in-out;
+}
+aside h1 a:hover:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.2rem;
+    background-color: var(--white);
+    z-index: -1;
+
+}
+
+li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0.2rem;
+    height: 100%;
+    border-radius: 0.2rem;
+    background-color: var(--black);
+    transition: all 500ms ease-in-out;
+}
+
+li a:hover::after {
+    /* content: ''; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.2rem;
+    background-color: var(--white);
+    z-index: -1;
+}
+a:hover {
+    color: var(--black);
+}
+
+/* CCS_Classes */
+.home {
+    padding: 0;
+}
+
+.center-auto {
+    max-width: 120rem;
+    margin: 0 auto;
+    /* padding: var(--gap); */
+}
+
+.Menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--black);
+    border-bottom: 0.01rem solid var(--gray);
+}
+
+.Menu-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Menu-flex ul {
+    list-style: none;
+    display: flex;
+}
+
+.men-items {
+    font-family: "Platypi", serif;
+    font-size: 2.6rem;
+}
+
+.Menu-flex li {
+    position: relative;
+}
