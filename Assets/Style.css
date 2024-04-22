@@ -17,9 +17,7 @@
 }
 
 body {
-    width: 100%;
-    height: 150vh;
-    background-image: url(/LinkinParkV2/img/Box@1x-5.0s-1912px-932px.svg);
+    background-image: url(../img/large-triangles.svg);
     color: rgb(255, 255, 255);
 }
 
@@ -42,7 +40,7 @@ h2 {
 }
 
 h3 {
-    font-size: 4rem;
+    font-size: 5rem;
     /* text-transform: uppercase; */
     font-family: "Playfair Display SC", serif;
 }
@@ -134,7 +132,10 @@ li a:hover::after {
 a:hover {
     color: var(--black);
 }
-
+img {
+    height: 50rem;
+    width: 50rem;
+}
 /* CCS_Classes */
 .home {
     padding: 0;
@@ -145,7 +146,6 @@ a:hover {
     margin: 0 auto;
     /* padding: var(--gap); */
 }
-
 .Menu {
     position: fixed;
     top: 0;
@@ -174,4 +174,25 @@ a:hover {
 
 .Menu-flex li {
     position: relative;
+}
+.flex-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.flex-content .div-his {
+    width: 45%;
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flex-content div p {
+    text-align: center;
+}
+.flex-content h3 {
+    text-transform: uppercase;
 }
