@@ -229,7 +229,7 @@ img {
     gap: var(--gap);
     padding: var(--gap);
 }
-.grid-music div {
+.grid-music div:not(.text-grid, .flex-conteiner-grid, .content-grid-sec) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -245,10 +245,18 @@ img {
     animation-range-start: cover 0;
     animation-range-end: cover 40%;
 }
-.grid-music div:hover {
+.grid-music div:hover:not(.text-grid, .flex-conteiner-grid, .content-grid-sec) {
     color: var(--black);
     background-color: var(--white);
 }
+.grid-music .text-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: span 2;
+}
+
 .img-grid {
     width: 30rem;
     height: 30rem;
@@ -264,7 +272,7 @@ img {
     animation: descri-grid 1ms ease-in-out;
     animation-timeline: view();
     animation-range-start: cover 0;
-    animation-range-end: cover 40%;
+    animation-range-end: cover 60%;
 }
 @keyframes descri-grid {
     from {
@@ -274,7 +282,7 @@ img {
         opacity: 1;
     }
 }
-.center-auto h3, p {
+.center-auto h3, p:not(.p-grid) {
     padding-top: var(--gap);
 }
 .center-auto p {
@@ -303,7 +311,7 @@ img {
     animation: logo 1ms ease-in-out;
     animation-timeline: view();
     animation-range-start: cover 0;
-    animation-range-end: cover 40%;   
+    animation-range-end: cover 45%;   
 }
 @keyframes logo {
     from {
@@ -312,4 +320,26 @@ img {
     to {
         transform: scale(1);
     }
+}
+.text-grid p .link-bonus {
+    padding: 0.5rem;
+    margin: 2rem;
+    transition: all 600ms ease-in-out;
+}
+.text-grid p .link-bonus:hover {
+    background-color: var(--white);
+    border-radius: 0.5rem;
+} 
+.flex-conteiner-grid {
+    display: flex;
+    justify-content: space-around;
+}
+.content-grid-sec {
+    padding: var(--gap );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.albuns {
+    min-height: 100vh;
 }
