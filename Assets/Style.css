@@ -239,7 +239,11 @@ img {
     text-transform: uppercase;
     border: solid 0.1rem var(--gray);
     border-radius: 0.5rem;
-    transition:all 500ms ease-in-out;
+    transition:all 0.5s ease-in-out;
+    animation: grid 500ms ease-in-out;
+    animation-timeline: view();
+    animation-range-start: cover 0;
+    animation-range-end: cover 40%;
 }
 .grid-music div:hover {
     color: var(--black);
@@ -257,6 +261,18 @@ img {
 }
 .center-auto h3, h5, p {
     text-align: center;
+    animation: descri-grid 1ms ease-in-out;
+    animation-timeline: view();
+    animation-range-start: cover 0;
+    animation-range-end: cover 40%;
+}
+@keyframes descri-grid {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 .center-auto h3, p {
     padding-top: var(--gap);
@@ -272,4 +288,28 @@ img {
 }
 .link-music {
     z-index: 1;
+}
+
+@keyframes grid {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.logo {
+    animation: logo 1ms ease-in-out;
+    animation-timeline: view();
+    animation-range-start: cover 0;
+    animation-range-end: cover 40%;   
+}
+@keyframes logo {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }
