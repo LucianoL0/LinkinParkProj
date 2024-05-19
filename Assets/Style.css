@@ -608,5 +608,7 @@ footer div .Rodape-f {
     .flex-conteiner-grid {
         flex-direction: column;
     }
-    
+    .img-galeria {
+        scale: 0.6;
+    }
 }
